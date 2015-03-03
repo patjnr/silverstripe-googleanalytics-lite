@@ -34,7 +34,7 @@ class GoogleAnalyticsLiteConfig extends DataExtension
      */
     public static function get_google_config($key)
     {
-        if (class_exists('SiteConfig') && SiteConfig::has_extension('GoogleLiteConfig')) {
+        if (class_exists('SiteConfig') && SiteConfig::has_extension('GoogleAnalyticsLiteConfig')) {
             $config = SiteConfig::current_site_config();
             switch ($key) {
                 case 'code':
