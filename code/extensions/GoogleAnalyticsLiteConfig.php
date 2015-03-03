@@ -39,7 +39,7 @@ class GoogleAnalyticsLiteConfig extends DataExtension
             switch ($key) {
                 case 'code':
                     return $config->GoogleAnalyticsLiteCode ? $config->GoogleAnalyticsLiteCode : false;
-                case 'profile':
+                case 'placement':
                     return $config->SnippetPlacement ? $config->SnippetPlacement : false;
             }
 

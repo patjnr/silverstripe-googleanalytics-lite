@@ -37,13 +37,13 @@ class GoogleLiteLogger extends Extension
         }
 
         // include the JS snippet into the frontend page markup
-        if (GoogleConfig::get_google_config('code')) {
+        if (GoogleAnalyticsLiteConfig::get_google_config('code')) {
+            $SnippetPlacement= GoogleAnalyticsLiteConfig::get_google_config('placement');
             $snippet = new ArrayData(array(
-                'GoogleAnalyticsCode' => GoogleConfig::get_google_config('code'),
-                'UseGoogleUniversalSnippet' => GoogleConfig::get_google_config('universal')
+                'GoogleAnalyticsCode' => GoogleAnalyticsLiteConfig::get_google_config('code'),
             ));
 
-            Requirements::customScript($snippet->renderWith('GoogleAnalyticsJSSnippet'));
+            Requirements::customScript($snippet->renderWith('GoogleAnalyticsLiteJSSnippet'));
         }
 
     }
