@@ -1,0 +1,23 @@
+{
+  "name": "patjnr/googleanalytics-lite",
+  "description": "The Google Analytics Lite module consists of just 1 (one) component: The Google Logger injects the google analytics javascript snippet into your source code",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "chitosystems",
+    "googleanalytics",
+    "google",
+    "googleanalytics-lite"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Itayi Paul Patrick Chitovoro",
+      "email": "patrick@chitosystems.com"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "3.*",
+    "silverstripe/cms": "3.*"
+  }
+}
