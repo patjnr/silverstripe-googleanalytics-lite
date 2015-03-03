@@ -38,12 +38,20 @@ class GoogleLiteLogger extends Extension
 
         // include the JS snippet into the frontend page markup
         if (GoogleAnalyticsLiteConfig::get_google_config('code')) {
+            $code = GoogleAnalyticsLiteConfig::get_google_config('code');
             $SnippetPlacement= GoogleAnalyticsLiteConfig::get_google_config('placement');
             $snippet = new ArrayData(array(
-                'GoogleAnalyticsCode' => GoogleAnalyticsLiteConfig::get_google_config('code'),
+                'GoogleAnalyticsCode' => $code,
             ));
+            $snippetHtml = $snippet->renderWith('GoogleAnalyticsLiteJSSnippet');
 
-            Requirements::customScript($snippet->renderWith('GoogleAnalyticsLiteJSSnippet'));
+            if($SnippetPlacement ==='Head'){
+                    Requirements::insertHeadTags(sprintf("<script type=\"text/javascript\">%s</script>", $snippetHtml->Value));
+            }else{
+                Requirements::customScript($snippetHtml);
+            }
+
+
         }
 
     }
