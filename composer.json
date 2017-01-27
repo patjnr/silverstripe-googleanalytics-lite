@@ -17,8 +17,8 @@
     }
   ],
   "require": {
-    "silverstripe/framework": "^4.0",
-    "silverstripe/cms": "^4.0"
+    "silverstripe/framework": "^4.0@dev",
+    "silverstripe/cms": "^4.0@dev"
   },
   "extra": {
     "installer-name": "googleanalytics-lite"
