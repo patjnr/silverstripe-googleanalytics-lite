@@ -1,9 +1,17 @@
 <?php
 
+//namespace InsiteApps\GoogleAnalyticsLite;
+
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Tab;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\OptionsetField;
+
 /**
  * @package googleanalytics-lite
  * @author Patrick Chitovoro
- * @copyright (c) Chito Systems 2015
+ * @copyright (c) Chito Systems 2017
  */
 class GoogleAnalyticsLiteConfig extends DataExtension
 {
